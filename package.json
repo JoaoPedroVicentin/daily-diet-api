@@ -1,0 +1,32 @@
+{
+  "name": "02-desafio-daily-diet-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoPedroVicentin/daily-diet-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JoaoPedroVicentin/daily-diet-api/issues"
+  },
+  "homepage": "https://github.com/JoaoPedroVicentin/daily-diet-api#readme",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/node": "^22.10.2",
+    "eslint": "^8.56.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "fastify": "^5.2.0"
+  }
+}
