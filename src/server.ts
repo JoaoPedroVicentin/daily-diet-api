@@ -1,12 +1,5 @@
-import fastify from 'fastify'
 import { env } from './env'
-import { mealsRoutes } from './routes/meals'
-
-const app = fastify()
-
-app.register(mealsRoutes, {
-  prefix: 'meals',
-})
+import { app } from './app'
 
 app
   .listen({
