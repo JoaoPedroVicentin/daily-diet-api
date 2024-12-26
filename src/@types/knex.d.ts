@@ -10,8 +10,9 @@ declare module 'knex/types/tables' {
       description: string
       dateTime: number
       onDiet: boolean
+      user_id: string
       created_at: string
-      session_id?: string
+      updated_at: string
     }
   }
 }
