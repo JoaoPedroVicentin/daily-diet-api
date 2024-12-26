@@ -9,14 +9,14 @@ export async function checkSessionIdExists(
 
   if (!sessionId) {
     return reply.status(401).send({
-      message: 'Unauthorized.',
+      message: 'Não autorizado.',
     })
   }
 
   const user = await knex('users').where({ session_id: sessionId }).first()
 
   if (!user) {
-    return reply.status(401).send({ message: 'Unauthorized' })
+    return reply.status(401).send({ message: 'Não autorizado' })
   }
 
   request.user = user

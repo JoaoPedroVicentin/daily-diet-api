@@ -28,7 +28,7 @@ export async function mealsRoutes(app: FastifyInstance) {
     }
 
     if (meal.user_id !== request.user?.id) {
-      return reply.status(401).send({ error: 'Unauthorized' })
+      return reply.status(401).send({ error: 'Não autorizado' })
     }
 
     return reply.send({ meal })
@@ -111,7 +111,7 @@ export async function mealsRoutes(app: FastifyInstance) {
     }
 
     if (existingMeal.user_id !== request.user?.id) {
-      return reply.status(401).send({ error: 'Unauthorized' })
+      return reply.status(401).send({ error: 'Não autorizado' })
     }
 
     await knex('meals')
@@ -143,7 +143,7 @@ export async function mealsRoutes(app: FastifyInstance) {
     }
 
     if (meal.user_id !== request.user?.id) {
-      return reply.status(401).send({ error: 'Unauthorized' })
+      return reply.status(401).send({ error: 'Não autorizado' })
     }
 
     await knex('meals').where('id', id).delete()
